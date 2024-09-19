@@ -30,4 +30,6 @@ echo 'eval "$(task --completion bash)"' >> ~/.bashrc
 echo 'export PATH=$PATH:$HOME/.cargo/bin' >> ~/.bashrc
 
 # Install additional ROS 2 packages
-# sudo apt-get install -y ros-${ROS_DISTRO}-<package-name>
+sudo apt-get -y install ros-${ROS_DISTRO}-navigation2
+sudo apt-get -y install ros-${ROS_DISTRO}-nav2-bringup
+sudo apt-get -y install ros-${ROS_DISTRO}-turtlebot3*

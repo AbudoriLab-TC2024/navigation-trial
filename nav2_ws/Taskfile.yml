@@ -1,0 +1,10 @@
+version: '3'
+
+tasks:
+  clean:
+    cmds:
+      - rm -rf build install log
+
+  build:
+    cmds:
+      - colcon build --symlink-install

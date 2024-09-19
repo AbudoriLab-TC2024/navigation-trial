@@ -1,8 +1,4 @@
-# VSCode ROS 2 Template
-
-ROS 2 jazzy の開発環境のテンプレート。VSCodeのDevcontainer上で動作する。
-
-NVIDIA Container Toolkitの設定を入れているため、NVIDIA Container Toolkitがない(つまり、NVIDIA GPUがない)環境では動作しない。
+# Navigation Trial
 
 ## 前提環境
 
