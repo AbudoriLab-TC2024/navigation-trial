@@ -5,6 +5,7 @@
         "llvm-vs-code-extensions.vscode-clangd",
         "usernamehw.errorlens",
         "ms-vscode.cmake-tools",
-        "EditorConfig.EditorConfig"
+        "EditorConfig.EditorConfig",
+        "redhat.vscode-xml"
     ]
 }
