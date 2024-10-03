@@ -1,0 +1,19 @@
+<launch>
+  <arg name="world_sdf_file" default="empty.sdf" />
+  <arg name="robot_sdf_file" default="$(find-pkg-share gz_demo)/models/rrbot.urdf" />
+  <arg name="bridge_config" default="$(find-pkg-share gz_demo)/config/gz_bridge.yaml" />
+  <arg name="rviz_config" default="$(find-pkg-share gz_demo)/config/rviz.rviz" />
+
+  <executable name="gzserver" cmd="gz sim $(var world_sdf_file)" />
+  <executable name="spawn"
+    cmd="gz service -s /world/empty/create --reqtype gz.msgs.EntityFactory  --reptype gz.msgs.Boolean --timeout 1000 --req 'sdf_filename: &quot;/workspaces/navigation-trial/gz_ws/install/gz_demo/share/gz_demo/models/rrbot.urdf&quot;, name: &quot;robot&quot;'" />
+
+  <node pkg="robot_state_publisher" exec="robot_state_publisher">
+    <param name="use_sim_time" value="true" />
+    <param name="robot_description" value="$(file-content $(var robot_sdf_file))" />
+  </node>
+  <node pkg="rviz2" exec="rviz2" args="-d $(var rviz_config)" />
+  <node pkg="ros_gz_bridge" exec="parameter_bridge">
+    <param name="config_file" value="$(var bridge_config)" />
+  </node>
+</launch>

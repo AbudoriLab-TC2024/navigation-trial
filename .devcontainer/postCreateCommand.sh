@@ -29,7 +29,11 @@ echo 'eval "$(register-python-argcomplete colcon)"' >> ~/.bashrc
 echo 'eval "$(task --completion bash)"' >> ~/.bashrc
 echo 'export PATH=$PATH:$HOME/.cargo/bin' >> ~/.bashrc
 
+sudo chown $(id -u) /tmp/untime-xdg_runtime_dir
+
 # Install additional ROS 2 packages
 sudo apt-get -y install ros-${ROS_DISTRO}-navigation2
 sudo apt-get -y install ros-${ROS_DISTRO}-nav2-bringup
 sudo apt-get -y install ros-${ROS_DISTRO}-turtlebot3*
+sudo apt-get -y install ros-${ROS_DISTRO}-ros-gz
+sudo apt-get -y install ros-${ROS_DISTRO}-joint-state-publisher-gui
