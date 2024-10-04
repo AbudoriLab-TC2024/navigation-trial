@@ -1,5 +1,5 @@
 {
-    "name": "ROS 2 jazzy NVIDIA",
+    "name": "ROS 2 jazzy Linux AMD6 NVIDIA",
     "image": "osrf/ros:jazzy-desktop",
     "runArgs": [
         "--env=DISPLAY",
@@ -19,7 +19,7 @@
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {}
     },
-    "postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
+    "postCreateCommand": "bash .devcontainer/linux_amd64_nvidia/postCreateCommand.sh",
     "customizations": {
         "vscode": {
             "extensions": [
