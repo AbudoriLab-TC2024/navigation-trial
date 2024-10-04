@@ -1,0 +1,19 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - colcon build --symlink-install
+
+  clean:
+    cmds:
+      - rm -rf build install log
+
+  clean-ros:
+    cmds:
+      - rm -r ~/.ros
+
+  clean-all:
+    deps:
+      - clean
+      - clean-ros

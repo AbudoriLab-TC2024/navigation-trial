@@ -30,6 +30,8 @@ echo 'eval "$(task --completion bash)"' >> ~/.bashrc
 echo 'export PATH=$PATH:$HOME/.cargo/bin' >> ~/.bashrc
 
 sudo chown $(id -u) /tmp/untime-xdg_runtime_dir
+sudo chmod 700 /tmp/untime-xdg_runtime_dir
+
 
 # Install additional ROS 2 packages
 sudo apt-get -y install ros-${ROS_DISTRO}-navigation2

@@ -1,0 +1,5 @@
+<launch>
+  <arg name="world_sdf_file" default="$(find-pkg-share penguin_bringup)/worlds/park.sdf" />
+
+  <executable name="gzserver" cmd="gz sim $(var world_sdf_file)" />
+</launch>
