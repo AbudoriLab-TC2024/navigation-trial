@@ -4,7 +4,7 @@ project(penguin_description)
 find_package(ament_cmake REQUIRED)
 
 install(
-  DIRECTORY models
+  DIRECTORY models/
   DESTINATION share/${PROJECT_NAME}/models
 )
 

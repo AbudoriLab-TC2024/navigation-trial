@@ -38,3 +38,5 @@ sudo apt-get -y install ros-${ROS_DISTRO}-navigation2
 sudo apt-get -y install ros-${ROS_DISTRO}-nav2-bringup
 sudo apt-get -y install ros-${ROS_DISTRO}-turtlebot3*
 sudo apt-get -y install ros-${ROS_DISTRO}-ros-gz
+sudo apt-get install -y ros-${ROS_DISTRO}-teleop-twist-keyboard
+sudo apt-get install -y ros-${ROS_DISTRO}-rqt-graph

@@ -17,3 +17,9 @@ tasks:
     deps:
       - clean
       - clean-ros
+
+  launch:
+    cmds:
+      - |
+        source install/setup.sh
+        ros2 launch penguin_bringup park.launch.xml
