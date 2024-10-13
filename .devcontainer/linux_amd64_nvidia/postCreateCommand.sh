@@ -34,9 +34,11 @@ sudo chmod 700 /tmp/untime-xdg_runtime_dir
 
 
 # Install additional ROS 2 packages
-sudo apt-get -y install ros-${ROS_DISTRO}-navigation2
-sudo apt-get -y install ros-${ROS_DISTRO}-nav2-bringup
-sudo apt-get -y install ros-${ROS_DISTRO}-turtlebot3*
-sudo apt-get -y install ros-${ROS_DISTRO}-ros-gz
-sudo apt-get install -y ros-${ROS_DISTRO}-teleop-twist-keyboard
-sudo apt-get install -y ros-${ROS_DISTRO}-rqt-graph
+sudo apt-get -y install \
+    ros-${ROS_DISTRO}-navigation2 \
+    ros-${ROS_DISTRO}-nav2-bringup \
+    ros-${ROS_DISTRO}-turtlebot3* \
+    ros-${ROS_DISTRO}-ros-gz \
+    ros-${ROS_DISTRO}-teleop-twist-keyboard \
+    ros-${ROS_DISTRO}-rqt-graph \
+    ros-${ROS_DISTRO}-rqt-tf-tree \
