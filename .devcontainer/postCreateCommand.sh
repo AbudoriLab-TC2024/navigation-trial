@@ -24,12 +24,18 @@ popd
 
 # Set bashrc
 echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
-echo 'eval "$(register-python-argcomplete ros2)"' >> ~/.bashrc
-echo 'eval "$(register-python-argcomplete colcon)"' >> ~/.bashrc
+echo 'eval "$(register-python-argcomplete3 ros2)"' >> ~/.bashrc
+echo 'eval "$(register-python-argcomplete3 colcon)"' >> ~/.bashrc
 echo 'eval "$(task --completion bash)"' >> ~/.bashrc
 echo 'export PATH=$PATH:$HOME/.cargo/bin' >> ~/.bashrc
 
 # Install additional ROS 2 packages
-sudo apt-get -y install ros-${ROS_DISTRO}-navigation2
-sudo apt-get -y install ros-${ROS_DISTRO}-nav2-bringup
-sudo apt-get -y install ros-${ROS_DISTRO}-turtlebot3*
+sudo apt-get -y install \
+    ros-${ROS_DISTRO}-navigation2 \
+    ros-${ROS_DISTRO}-nav2-bringup \
+    ros-${ROS_DISTRO}-turtlebot3* \
+    ros-${ROS_DISTRO}-teleop-twist-keyboard \
+    ros-${ROS_DISTRO}-rqt-graph \
+    ros-${ROS_DISTRO}-rqt-tf-tree \
+    ignition-fortress \
+    ros-${ROS_DISTRO}-ros-ign
