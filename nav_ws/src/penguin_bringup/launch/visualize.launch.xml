@@ -1,0 +1,6 @@
+<launch>
+  <arg name="rviz_config" default="$(find-pkg-share penguin_bringup)/config/rviz.rviz" />
+  <node pkg="rviz2" exec="rviz2" args="-d $(var rviz_config)" />
+  <node pkg="rqt_graph" exec="rqt_graph" />
+  <node pkg="rqt_tf_tree" exec="rqt_tf_tree" />
+</launch>

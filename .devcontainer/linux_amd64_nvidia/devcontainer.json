@@ -4,7 +4,6 @@
     "runArgs": [
         "--env=DISPLAY",
         "--env=NVIDIA_DRIVER_CAPABILITIES=all",
-        "--env=XDG_RUNTIME_DIR=/tmp/runtime-xdg_runtime_dir",
         "--env=PULSE_SERVER=unix:/tmp/pulse/native",
         "--volume=/tmp/.X11-unix:/tmp/.X11-unix:rw",
         "--volume=/usr/share/vulkan/icd.d:/usr/share/vulkan/icd.d:ro",

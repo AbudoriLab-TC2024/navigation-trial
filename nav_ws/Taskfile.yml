@@ -18,8 +18,28 @@ tasks:
       - clean
       - clean-ros
 
-  launch:
+  park:
     cmds:
       - |
         source install/setup.sh
         ros2 launch penguin_bringup park.launch.xml
+
+  nav:
+    cmds:
+      - |
+        source install/setup.sh
+        # ros2 launch penguin_bringup nav.launch.xml
+        ros2 launch penguin_bringup check.launch.xml
+
+
+  view:
+    cmds:
+      - |
+        source install/setup.sh
+        ros2 launch penguin_bringup visualize.launch.xml
+
+  run:
+    cmds:
+      - |
+        source install/setup.sh
+        python3 script/path.py script/simple.csv
