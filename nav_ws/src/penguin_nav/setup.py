@@ -23,6 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'follow_path=penguin_nav.follow_path:main',
         ],
     },
 )

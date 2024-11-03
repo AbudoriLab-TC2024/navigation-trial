@@ -47,6 +47,7 @@ sudo apt-get -y install \
     ros-${ROS_DISTRO}-teleop-twist-keyboard \
     ros-${ROS_DISTRO}-rqt-graph \
     ros-${ROS_DISTRO}-rqt-tf-tree \
-    ros-${ROS_DISTRO}-rmw-cyclonedds-cpp
+    ros-${ROS_DISTRO}-rmw-cyclonedds-cpp \
+    python3-pandas
     # ignition-fortress \
     # ros-${ROS_DISTRO}-ros-ign
