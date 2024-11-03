@@ -43,4 +43,9 @@ nav2 の設定は以下の通り
 
 - `/opt/ros/humble/share/turtlebot3_navigation2/param/waffle.yaml` ベース
 - `global_costmap` の `width`, `height`, `origin_x`, `origin_y` を設定
-- `global_cosstmap` の `static_layler` を削除
+- `global_cosstmap` の `static_layer` を削除
+
+
+### penguin_bringup_sim
+
+gazebo(classic) でナビゲーションを評価するパッケージ。
