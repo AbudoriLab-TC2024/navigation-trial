@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find-pkg-share turtlebot3_gazebo)/launch/turtlebot3_world.launch.py">
+  </include>
+  <include file="$(find-pkg-share penguin_nav)/launch/nav.launch.xml">
+    <arg name="use_sim_time" value="true" />
+  </include>
+  <node pkg="tf2_ros" exec="static_transform_publisher" args="0 0 0 0 0 0 map odom" />
+  <node pkg="rviz2" exec="rviz2" name="rviz2" args="-d $(find-pkg-share penguin_bringup_sim)/config/nav.rviz" />
+</launch>

@@ -29,6 +29,16 @@ echo 'eval "$(register-python-argcomplete3 colcon)"' >> ~/.bashrc
 echo 'eval "$(task --completion bash)"' >> ~/.bashrc
 echo 'export PATH=$PATH:$HOME/.cargo/bin' >> ~/.bashrc
 
+cat <<EOF >> ~/.bashrc
+# for classic gazebo
+stat /usr/share/gazebo/setup.sh &> /dev/null
+if [ $? -eq 0 ]; then
+    source /usr/share/gazebo/setup.sh
+fi
+EOF
+
+echo 'export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp' >> ~/.bashrc
+
 # Install additional ROS 2 packages
 sudo apt-get -y install \
     ros-${ROS_DISTRO}-navigation2 \
@@ -37,5 +47,6 @@ sudo apt-get -y install \
     ros-${ROS_DISTRO}-teleop-twist-keyboard \
     ros-${ROS_DISTRO}-rqt-graph \
     ros-${ROS_DISTRO}-rqt-tf-tree \
-    ignition-fortress \
-    ros-${ROS_DISTRO}-ros-ign
+    ros-${ROS_DISTRO}-rmw-cyclonedds-cpp
+    # ignition-fortress \
+    # ros-${ROS_DISTRO}-ros-ign
