@@ -1,5 +1,5 @@
 <launch>
-  <include file="$(find-pkg-share turtlebot3_gazebo)/launch/turtlebot3_world.launch.py">
+  <include file="$(find-pkg-share penguin_bringup_sim)/launch/park.launch.py">
   </include>
   <include file="$(find-pkg-share penguin_nav)/launch/nav.launch.xml">
     <arg name="use_sim_time" value="true" />

@@ -29,10 +29,16 @@ tasks:
       - |
         export TURTLEBOT3_MODEL=waffle
         source install/setup.sh
-        ros2 launch penguin_bringup_sim sim.launch.xml
+        ros2 launch penguin_bringup_sim sim.launch.xml log_level:=info
 
   run:
     cmds:
       - |
         source ./install/setup.sh
-        ros2 run penguin_nav follow_path -- path.csv
+        sleep 7
+        ros2 run penguin_nav follow_path.py -- path.csv
+
+  bringup:
+    deps:
+      - sim
+      - run
