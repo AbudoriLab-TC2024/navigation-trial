@@ -3,7 +3,7 @@ version: '3'
 tasks:
   build:
     cmds:
-      - colcon build --symlink-install
+      - colcon build --symlink-install --mixin release --mixin compile-commands
 
   clean:
     cmds:

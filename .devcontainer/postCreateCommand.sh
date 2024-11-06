@@ -51,3 +51,7 @@ sudo apt-get -y install \
     python3-pandas
     # ignition-fortress \
     # ros-${ROS_DISTRO}-ros-ign
+
+
+colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
+colcon mixin update
