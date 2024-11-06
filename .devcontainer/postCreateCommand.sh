@@ -15,11 +15,17 @@ ln -s $PWD/.devcontainer/tmux.conf ~/.tmux.conf
 
 sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b ~/.local/bin
 
+if [ $(arch) == "x86_64" ]; then
+    ARCH=amd64
+elif [ $(arch) == "aarch64" ]; then
+    ARCH="arm64"
+fi
+
 pushd /tmp
-wget https://github.com/junegunn/fzf/releases/download/0.51.0/fzf-0.51.0-linux_amd64.tar.gz
-tar xf fzf-0.51.0-linux_amd64.tar.gz
+wget https://github.com/junegunn/fzf/releases/download/0.51.0/fzf-0.51.0-linux_$ARCH.tar.gz
+tar xf fzf-0.51.0-linux_$ARCH.tar.gz
 sudo mv fzf /usr/local/bin/
-rm fzf-0.51.0-linux_amd64.tar.gz
+rm fzf-0.51.0-linux_$ARCH.tar.gz
 popd
 
 # Set bashrc
