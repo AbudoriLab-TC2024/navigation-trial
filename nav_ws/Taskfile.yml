@@ -36,7 +36,7 @@ tasks:
       - |
         source ./install/setup.sh
         sleep 7
-        ros2 run penguin_nav follow_path.py -- path.csv
+        ros2 run penguin_nav follow_path.py -- data/path.csv
 
   bringup:
     deps:
