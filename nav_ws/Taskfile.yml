@@ -3,7 +3,7 @@ version: '3'
 tasks:
   build:
     cmds:
-      - colcon build --symlink-install --mixin release --mixin compile-commands
+      - colcon build --parallel-workers 4 --symlink-install --mixin release --mixin compile-commands --mixin build-testing-off
 
   clean:
     cmds:
@@ -30,6 +30,15 @@ tasks:
         export TURTLEBOT3_MODEL=waffle
         source install/setup.sh
         ros2 launch penguin_bringup_sim sim.launch.xml log_level:=info
+
+  park:
+    cmds:
+      - |
+        export TURTLEBOT3_MODEL=waffle
+        source install/setup.sh
+        ros2 launch penguin_bringup_sim park.launch.py log_level:=info
+
+
 
   run:
     cmds:
