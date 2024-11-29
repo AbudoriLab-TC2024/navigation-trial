@@ -3,7 +3,7 @@ version: '3'
 tasks:
   build:
     cmds:
-      - colcon build --parallel-workers 4 --symlink-install --mixin release --mixin compile-commands --mixin build-testing-off
+      - colcon build --parallel-workers 4 --symlink-install --mixin release --mixin compile-commands
 
   clean:
     cmds:
@@ -38,8 +38,12 @@ tasks:
         source install/setup.sh
         ros2 launch penguin_bringup_sim park.launch.py log_level:=info
 
-
-
+  test:
+    deps:
+      - build
+    cmds:
+      - colcon test --packages-select penguin_nav
+      - colcon test-result --verbose
   run:
     cmds:
       - |
