@@ -34,6 +34,7 @@ echo 'eval "$(register-python-argcomplete3 ros2)"' >> ~/.bashrc
 echo 'eval "$(register-python-argcomplete3 colcon)"' >> ~/.bashrc
 echo 'eval "$(task --completion bash)"' >> ~/.bashrc
 echo 'export PATH=$PATH:$HOME/.cargo/bin' >> ~/.bashrc
+sed -i 's/OSH_THEME=.*/OSH_THEME="bakke/g' ~/.bashrc
 
 cat <<EOF >> ~/.bashrc
 # for classic gazebo
